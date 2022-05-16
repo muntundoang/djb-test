@@ -16,8 +16,6 @@ RUN npm install -g nodemon
 
 RUN npm run generate
 
-RUN npm run deploy
-
 COPY ./ ./
 
 CMD ["npm", "run", "start"]
