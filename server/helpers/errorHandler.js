@@ -77,6 +77,14 @@ function errHandler(err){
                 status: 400
             }
 
+        case 'TokenExpiredError':
+            return {
+                name: err.name,
+                errCode: 10,
+                message: 'Current Token is expired. please Relogin',
+                status: 401
+            }
+
         default:
             return {
                 name: err.name,

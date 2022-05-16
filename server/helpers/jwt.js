@@ -18,7 +18,17 @@ const readPayloadToken = (token) => {
 
 const payloadTokenGenerate = (payload) => {
     const token = jwt.sign({data: payload}, keyAuth, { expiresIn: '12h' })
-    const {expired_at, data} = readPayloadToken(token)
+    const {expired_at} = readPayloadToken(token)
+    const tokenRes = {
+        access_token: token,
+        expired_at: expired_at
+    }
+    return tokenRes
+}
+
+const testPayloadTokenGenerate = (payload) => {
+    const token = jwt.sign({data: payload}, keyAuth, { expiresIn: 100 })
+    const {expired_at} = readPayloadToken(token)
     const tokenRes = {
         access_token: token,
         expired_at: expired_at
@@ -28,5 +38,6 @@ const payloadTokenGenerate = (payload) => {
 
 module.exports = {
     payloadTokenGenerate,
-    readPayloadToken
+    readPayloadToken,
+    testPayloadTokenGenerate
 }
