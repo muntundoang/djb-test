@@ -6,6 +6,8 @@ ENV PORT=4003
 
 COPY package.json package-lock.json ./
 
+COPY ./prisma prisma
+
 RUN npm install && npm cache clean --force
 
 RUN npm install -g nodemon
