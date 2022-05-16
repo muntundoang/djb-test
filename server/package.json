@@ -4,9 +4,9 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "test": "npx jest --runInBand",
-    "dev": "nodemon app.js",
-    "start": "node app.js"
+    "db:migrate:test": "dotenv -e .env.test -- npx prisma db push --accept-data-loss",
+    "test": "dotenv -e .env.test -- npx jest --runInBand",
+    "start": "nodemon app.js"
   },
   "repository": {
     "type": "git",

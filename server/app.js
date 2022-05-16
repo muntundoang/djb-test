@@ -14,8 +14,8 @@ if(process.env.NODE_ENV !== 'production') {
   
   app.use('/', router)
   
-  // app.listen(port, () => {
-  //   console.log(`Gas keun ${port}`)
-  // })
+  app.listen(port, () => {
+    console.log(`Gas keun ${port}`)
+  })
   
-  module.exports = app
+  // module.exports = app
