@@ -1,0 +1,40 @@
+{
+  "name": "djb-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "npx jest --runInBand",
+    "dev": "nodemon app.js",
+    "start": "node app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/muntundoang/djb-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/muntundoang/djb-test/issues"
+  },
+  "homepage": "https://github.com/muntundoang/djb-test#readme",
+  "devDependencies": {
+    "dotenv": "^16.0.1",
+    "dotenv-cli": "^5.1.0",
+    "jest": "^28.1.0",
+    "jest-mock-extended": "^2.0.6",
+    "nodemon": "^2.0.16",
+    "prisma": "^3.14.0",
+    "supertest": "^6.2.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^3.14.0",
+    "bcrypt": "^5.0.1",
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "generate-password": "^1.7.0",
+    "jsonwebtoken": "^8.5.1",
+    "pg": "^8.7.3"
+  }
+}
