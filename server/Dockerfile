@@ -4,11 +4,13 @@ WORKDIR /server
 
 ENV PORT=4003
 
-COPY package.json package-lock.json ./
+COPY package.json package.json
 
-COPY ./prisma prisma
+COPY package-lock.json package-lock.json
 
 RUN npm install && npm cache clean --force
+
+COPY ./prisma prisma
 
 RUN npm install -g nodemon
 
